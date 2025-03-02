@@ -1,26 +1,48 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>HASS Assignment 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Singapore PSI Dashboard</title>
   <!-- Link to external CSS file -->
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="container">
+    <header>
+      <h1>Singapore PSI Monitoring</h1>
+      <p class="subtitle">Real-time air quality information</p>
+      <div class="timestamp" id="timestring"></div>
+    </header>
 
-  <h2>Singapore PSI Table</h2>
-  <h4 id="timestring"></h4>
+    <main>
+      <div class="table-container">
+        <table id="PSItable">
+          <thead>
+            <tr>
+              <th>Metric</th>
+              <th>Central</th>
+              <th>West</th>
+              <th>East</th>
+              <th>North</th>
+              <th>South</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Table content will be populated by JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </main>
 
-  <table id="PSItable">
-      <tr>
-          <th>Metric</th>
-          <th>Central</th>
-          <th>West</th>
-          <th>East</th>
-          <th>North</th>
-          <th>South</th>
-      </tr>
-  </table>
+    <footer>
+      <p>Data provided by the National Environment Agency</p>
+    </footer>
+  </div>
 
   <!-- jQuery from CDN -->
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>

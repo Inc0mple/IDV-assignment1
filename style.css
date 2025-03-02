@@ -1,40 +1,126 @@
-/* Basic reset or normalise styles if desired */
-/* table styling */
+/* Base styles and CSS reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Header styles */
+header {
+  background: linear-gradient(135deg, #4CAF50, #2196F3);
+  color: white;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 300;
+  opacity: 0.9;
+  margin-bottom: 12px;
+}
+
+.timestamp {
+  font-size: 0.9rem;
+  font-weight: 400;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+/* Main content area */
+main {
+  padding: 30px 20px;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+/* Table styling */
 table {
-    border-collapse: collapse;
-    margin: 20px 0;
-    font-family: Arial, sans-serif;
-    width: 80%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: center;
+  border: none;
+}
+
+th {
+  background-color: #f1f8ff;
+  color: #0366d6;
+  font-weight: 500;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+tr:hover {
+  background-color: #f1f8ff;
+  transition: background-color 0.2s ease;
+}
+
+td {
+  font-size: 0.95rem;
+}
+
+/* Footer styles */
+footer {
+  padding: 15px 20px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666;
+  border-top: 1px solid #eee;
+  background-color: #f8f9fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
   }
   
   th, td {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.9rem;
   }
   
-  /* Make the header a bit distinctive */
-  th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+  .container {
+    border-radius: 6px;
   }
-  
-  /* Optional: add some hover effects */
-  tr:hover {
-    background-color: #fafafa;
-  }
-  
-  h2 {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  h4#timestring {
-    text-align: center;
-    font-weight: normal;
-    color: #555;
-  }
-  
+}
